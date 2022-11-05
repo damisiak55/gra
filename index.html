@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl_PL">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brawl Stars - Puzzle</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <img src="cookie.png" alt="">
+      <div class="content">
+        <header>Pliki Cookies</header>
+        <p>Ta strona korzysta z plików cookie, aby zapewnić najlepszą jakość korzystania z strony.</p>
+        <div class="buttons">
+          <button class="item">Zrozumiano!</button>
+          <a href="ciasteczka/index.html" class="item">Czym są ciasteczka?</a>
+        </div>
+      </div>
+    </div>
+  
+    <script>
+      const cookieBox = document.querySelector(".wrapper"),
+      acceptBtn = cookieBox.querySelector("button");
+  
+      acceptBtn.onclick = ()=>{
+        //setting cookie for 1 month, after one month it'll be expired automatically
+        document.cookie = "CookieBy=CodingNepal; max-age="+60*60*24*30;
+        if(document.cookie){ //if cookie is set
+          cookieBox.classList.add("hide"); //hide cookie box
+        }else{ //if cookie not set then alert an error
+          alert("Nie można ustawić pliku cookie! Odblokuj tą stronę w ustawieniach plików cookie swojej przeglądarki.");
+        }
+      }
+      let checkCookie = document.cookie.indexOf("CookieBy=CodingNepal"); //checking our cookie
+      //if cookie is set then hide the cookie box else show it
+      checkCookie != -1 ? cookieBox.classList.add("hide") : cookieBox.classList.remove("hide");
+    </script>   
+
+  </head>
+  <body>
+    <div id="game-board">
+      <div class="tile">1</div>
+      <div class="tile">2</div>
+      <div class="tile">3</div>
+      <div class="tile">4</div>
+      <div class="tile">5</div>
+      <div class="tile">6</div>
+      <div class="tile">7</div>
+      <div class="tile">8</div>
+      <div class="tile"></div>
+    </div>
+    <script src="game.js"></script>
+  </body>
+</html>
