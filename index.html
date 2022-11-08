@@ -14,7 +14,7 @@
         <p>Ta strona korzysta z plików cookie, aby zapewnić najlepszą jakość korzystania z witryny.</p>
         <div class="buttons">
           <button class="item">Zrozumiano!</button>
-          <a href="ciasteczka/index.html" class="item">Czym są ciasteczka?</a>
+          <a href="ciasteczka" class="item">Czym są ciasteczka?</a>
         </div>
       </div>
     </div>
@@ -25,7 +25,7 @@
   
       acceptBtn.onclick = ()=>{
         //setting cookie for 1 month, after one month it'll be expired automatically
-        document.cookie = "CookieBy=CodingNepal; max-age="+60*60*24*30;
+        document.cookie = "CookieBy=CodingNepal, Damisiak; max-age="+60*60*24*30;
         if(document.cookie){ //if cookie is set
           cookieBox.classList.add("hide"); //hide cookie box
         }else{ //if cookie not set then alert an error
