@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl_PL">
+  <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LR3KVG8YY7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LR3KVG8YY7');
+</script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CrafingPuzzle - Damisiak</title>
+    <link rel="stylesheet" href="style.css" />
+    <link id="favicon" rel="icon" href="image.png" type="image/x-icon">
+  </head>
+  <body>
+    <div class="wrapper">
+      <img src="cookie.png" alt="">
+      <div class="content">
+        <header>Pliki Cookies</header>
+        <p>Ciasteczka to małe pliki tekstowe, które przeglądarka internetowa zapisuje na komputerze użytkownika podczas odwiedzania witryny internetowej. </p>
+        <div class="buttons">
+          <button class="item">Akceptuje!</button>
+          <a href="pl/ciasteczka/index.html" class="item">Więcej<br>informacji...</a>
+        </div>
+      </div>
+    </div>
+  
+    <script>
+      const cookieBox = document.querySelector(".wrapper"),
+      acceptBtn = cookieBox.querySelector("button");
+  
+      acceptBtn.onclick = ()=>{
+        //setting cookie for 1 month, after one month it'll be expired automatically
+        document.cookie = "CookieBy=CodingNepal, damisiak; max-age="+60*60*24*30;
+        if(document.cookie){ //if cookie is set
+          cookieBox.classList.add("hide"); //hide cookie box
+        }else{ //if cookie not set then alert an error
+          alert("⚠️ Błąd: Nie można ustawić plików cookies. Sprawdź, czy ustawienia przeglądarki pozwalają na zapisywanie plików cookie.");
+        }
+      }
+      let checkCookie = document.cookie.indexOf("CookieBy=CodingNepal"); //checking our cookie
+      //if cookie is set then hide the cookie box else show it
+      checkCookie != -1 ? cookieBox.classList.add("hide") : cookieBox.classList.remove("hide");
+    </script>   
+
+  </head>
+  <body>
+    <div id="game-board">
+      <div class="tile">1</div>
+      <div class="tile">2</div>
+      <div class="tile">3</div>
+      <div class="tile">4</div>
+      <div class="tile">5</div>
+      <div class="tile">6</div>
+      <div class="tile">7</div>
+      <div class="tile">8</div>
+      <div class="tile"></div>
+    </div>
+    
+    <script src="game.js"></script>
+
+  </body>
+</html>
