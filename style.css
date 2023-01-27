@@ -19,6 +19,7 @@ body{
   box-shadow: 1px 7px 14px -5px rgba(0,0,0,0.15);
   text-align: center;
 }
+
 .wrapper.hide{
   opacity: 0;
   pointer-events: none;

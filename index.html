@@ -13,18 +13,19 @@
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MagmaPuzzle</title>
+    <title>CrafingPuzzle - Damisiak</title>
     <link rel="stylesheet" href="style.css" />
+    <link id="favicon" rel="icon" href="image.png" type="image/x-icon">
   </head>
   <body>
     <div class="wrapper">
       <img src="cookie.png" alt="">
       <div class="content">
         <header>Pliki Cookies</header>
-        <p>Ta strona korzysta z plików cookie, aby zapewnić najlepszą jakość korzystania z witryny.</p>
+        <p>Ciasteczka to małe pliki tekstowe, które przeglądarka internetowa zapisuje na komputerze użytkownika podczas odwiedzania witryny internetowej. </p>
         <div class="buttons">
-          <button class="item">Zrozumiano!</button>
-          <a href="ciasteczka" class="item">Czym są ciasteczka?</a>
+          <button class="item">Akceptuje!</button>
+          <a href="pl/ciasteczka/index.html" class="item">Więcej<br>informacji...</a>
         </div>
       </div>
     </div>
@@ -35,11 +36,11 @@
   
       acceptBtn.onclick = ()=>{
         //setting cookie for 1 month, after one month it'll be expired automatically
-        document.cookie = "CookieBy=CodingNepal, Damisiak; max-age="+60*60*24*30;
+        document.cookie = "CookieBy=CodingNepal, damisiak; max-age="+60*60*24*30;
         if(document.cookie){ //if cookie is set
           cookieBox.classList.add("hide"); //hide cookie box
         }else{ //if cookie not set then alert an error
-          alert("Nie można ustawić pliku cookie! Odblokuj tą stronę w ustawieniach plików cookie swojej przeglądarki.");
+          alert("⚠️ Błąd: Nie można ustawić plików cookies. Sprawdź, czy ustawienia przeglądarki pozwalają na zapisywanie plików cookie.");
         }
       }
       let checkCookie = document.cookie.indexOf("CookieBy=CodingNepal"); //checking our cookie
@@ -60,6 +61,7 @@
       <div class="tile">8</div>
       <div class="tile"></div>
     </div>
+    
     <script src="game.js"></script>
 
   </body>

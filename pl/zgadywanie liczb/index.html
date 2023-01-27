@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gra w zgadywanie liczb</title>
+  <script>
+    var numberToGuess = Math.floor(Math.random() * 100);
+    var numberOfGuesses = 0;
+
+    function guessNumber() {
+      numberOfGuesses++;
+      var guessedNumber = document.getElementById("guessedNumber").value;
+
+      if (guessedNumber == numberToGuess) {
+        document.getElementById("result").innerHTML = "Gratulacje! Zgadłeś liczbę w " + numberOfGuesses + " próbach.";
+      } else if (guessedNumber > numberToGuess) {
+        document.getElementById("result").innerHTML = "Liczba jest mniejsza niż " + guessedNumber + ".";
+      } else {
+        document.getElementById("result").innerHTML = "Liczba jest większa niż " + guessedNumber + ".";
+      }
+    }
+  </script>
+</head>
+<body>
+  <p>Zgadnij liczbę od 0 do 100:</p>
+  <input type="number" id="guessedNumber" min="0" max="100">
+  <button onclick="guessNumber()">Zgaduj</button>
+  <p id="result"></p>
+</body>
+</html>
