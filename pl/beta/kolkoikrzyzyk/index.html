@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal - www.youtube.com/codingnepal || www.codingnepalweb.com -->
+<html lang="pl">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LR3KVG8YY7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LR3KVG8YY7');
+</script>
+
+    <meta charset="UTF-8">
+    <title>Gra Kółko i krzyżyk - Damisiak</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+    <link id="favicon" rel="icon" href="https://cdn-icons-png.flaticon.com/512/9267/9267851.png" type="image/x-icon">
+</head>
+<body>
+  <!-- select box -->
+  <div class="select-box">
+    <header><img src="https://cdn-icons-png.flaticon.com/512/9267/9267851.png" width="30"><color> <b> Kółko i krzyżyk</b></color></header>
+    <div class="content">
+      <div  style="text-align: center;" class="title">👋 Cześć, <u>wybierz gracza!</u></div>
+      <div style="text-align: center;"><a id="myButton" href="#">Informacje i zasady gry w Kółko i Krzyżyk</a></div>
+      <br>
+      <img src="http://i.wpimg.pl/1024x0/portal-abczdrowie.wpcdn.pl/imageCache/2022/05/30/adobestock-481199500_be4a.jpg" width="350">
+      <br>
+      <br>
+      <div class="options">
+        <button class="playerX">Gracz (X)</button>
+        <button class="playerO">Gracz (O)</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- playboard section -->
+  <div class="play-board">
+    <div class="details">
+      <div class="players">
+        <span class="Xturn">Kolej X</span>
+        <span class="Oturn">Kolej O</span>
+        <div class="slider"></div>
+      </div>
+    </div>
+    <div class="play-area">
+      <section>
+        <span class="box1"></span>
+        <span class="box2"></span>
+        <span class="box3"></span>
+      </section>
+      <section>
+        <span class="box4"></span>
+        <span class="box5"></span>
+        <span class="box6"></span>
+      </section>
+      <section>
+        <span class="box7"></span>
+        <span class="box8"></span>
+        <span class="box9"></span>
+      </section>
+    </div>
+  </div>
+
+  <body>
+    <div class="popup">
+      <div class="icon"><i class=""></i></div>
+      <div class="details">
+        <h2 class="title"></h2>
+        <p class="desc"></p>
+        <button class="reconnect">Spróbuj połączyć ponownie.</button>
+      </div>
+    </div>
+
+  <!-- result box -->
+  <div class="result-box">
+    <div class="won-text"></div>
+    <div class="btn"><button>Spróbuj jeszcze raz!</button></div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
