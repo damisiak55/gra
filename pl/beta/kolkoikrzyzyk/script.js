@@ -104,7 +104,7 @@ function selectWinner(){
                 resultBox.classList.add("show");
                 playBoard.classList.remove("show");
             }, 700);
-            wonText.textContent = "O to się pogubiło...!";
+            wonText.textContent = "O to się pogubiło...";
         }
     }
 }
